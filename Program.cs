@@ -1,4 +1,5 @@
 ﻿using System;
+using classes.Models;
 
 namespace petshop
 {
@@ -6,7 +7,15 @@ namespace petshop
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Cat snibbley = new Cat("Mr.", "Snibbley", 3);
+            System.Console.WriteLine(snibbley.FullName);
+            snibbley.Pet();
+            snibbley.Pet();
+            snibbley.Feed();
+            snibbley.Feed("catfood");
+
+            PetStore p = new PetStore();
+            p.AddInventory(snibbley);
         }
     }
 }
